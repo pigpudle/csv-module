@@ -1,6 +1,6 @@
 {
   "name": "csv-module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Node.js implementation of Python3 csv module.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,0 +1,30 @@
+{
+  "name": "csv-module",
+  "version": "1.0.0",
+  "description": "Node.js implementation of Python3 csv module.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigpudle/csv-module.git"
+  },
+  "keywords": [
+    "csv",
+    "python",
+    "python3"
+  ],
+  "author": "Neli Harbuzava <neliharbuzavapublic@gmail.com> (https://github.com/pigpudle)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pigpudle/csv-module/issues"
+  },
+  "homepage": "https://github.com/pigpudle/csv-module#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

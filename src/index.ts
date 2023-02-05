@@ -1,4 +1,5 @@
 import { TCSVFile, TDialect, TExtrasaction, TFieldSizeLimitFunction, TGetDialectFunction, IDictReader, IDictWriter, TListDialectsFunction, TReaderFunction, TRegisterDialectFunction, TUnregisterDialectFunction, TWriterFunction, IDialect, IExcel, IExcelTab, IUnixDialect, ISniffer, EQuoting } from "./types";
+export { fieldSizeLimit } from './functions/fieldSizeLimit'
 
 // TODO: implement
 export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {
@@ -28,11 +29,6 @@ export const getDialect: TGetDialectFunction = (name) => {
 // TODO: implement
 export const listDialects: TListDialectsFunction = () => {
   
-};
-
-// TODO: implement
-export const fieldSizeLimit: TFieldSizeLimitFunction = () => {
-
 };
 
 // TODO: implement

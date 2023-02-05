@@ -1,3 +1,7 @@
+export interface IState {
+  fieldSizeLimit: number;
+}
+
 export type TCSVFile = any; // TODO: implement
 
 export interface IReader { // TODO: implement

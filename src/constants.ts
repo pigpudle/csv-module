@@ -1,0 +1,1 @@
+export const DEFAULT_FIELD_SIZE_LIMIT = 131072; // 128KB

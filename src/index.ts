@@ -1,5 +1,7 @@
 import { TCSVFile, TDialect, TExtrasaction, TFieldSizeLimitFunction, TGetDialectFunction, IDictReader, IDictWriter, TListDialectsFunction, TReaderFunction, TRegisterDialectFunction, TUnregisterDialectFunction, TWriterFunction, IDialect, IExcel, IExcelTab, IUnixDialect, ISniffer, EQuoting } from "./types";
 export { fieldSizeLimit } from './functions/fieldSizeLimit'
+export { listDialects } from './functions/listDialects'
+export { Dialect } from './classes/Dialect'
 
 // TODO: implement
 export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {
@@ -27,11 +29,6 @@ export const getDialect: TGetDialectFunction = (name) => {
 };
 
 // TODO: implement
-export const listDialects: TListDialectsFunction = () => {
-  
-};
-
-// TODO: implement
 export class DictReader implements IDictReader {
   constructor(f: TCSVFile, fieldNames?: string[], restKey?: string, restVal?: string, dialect?: TDialect) {
 
@@ -43,11 +40,6 @@ export class DictWriter implements IDictWriter {
   constructor(f: TCSVFile, fieldNames: string[], restVal?: string, extrasaction?: TExtrasaction, dialect?: TDialect) {
 
   }
-}
-
-// TODO: implement
-export class Dialect implements IDialect {
-
 }
 
 // TODO: implement

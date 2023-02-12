@@ -1,5 +1,8 @@
 export interface IState {
   fieldSizeLimit: number;
+  readonly dialects: {
+    [key: string]: IDialect;
+  }
 }
 
 export type TCSVFile = any; // TODO: implement
@@ -17,13 +20,9 @@ export interface IWriter { // TODO: implement
   dialect: any;
 };
 
-export type TDialectName = string;
-
 export type TDialect = any; // TODO: implement
 
 export type TFmtParams = any; // TODO: implement
-
-export type TSizeLimit = number; // TODO: implement
 
 export type TExtrasaction = any; // TODO: implement
 
@@ -38,15 +37,15 @@ export type TReaderFunction = (csvFile: TCSVFile, dialect?: TDialect, fmtParams?
 
 export type TWriterFunction = (csvFile: TCSVFile, dialect?: TDialect, fmtParams?: TFmtParams) => IWriter; // TODO: implement
 
-export type TRegisterDialectFunction = (name: TDialectName, dialect?: TDialect, fmtParams?: TFmtParams) => void; // TODO: implement
+export type TRegisterDialectFunction = (name: string, dialect?: TDialect, fmtParams?: TFmtParams) => void; // TODO: implement
 
-export type TUnregisterDialectFunction = (name: TDialectName) => void; // TODO: implement
+export type TUnregisterDialectFunction = (name: string) => void; // TODO: implement
 
-export type TGetDialectFunction = (name: TDialectName) => Readonly<TDialect>; // TODO: implement
+export type TGetDialectFunction = (name: string) => Readonly<TDialect>; // TODO: implement
 
-export type TListDialectsFunction = () => TDialectName[]; // TODO: implement
+export type TListDialectsFunction = () => string[];
 
-export type TFieldSizeLimitFunction = (newLimit?: TSizeLimit) => TSizeLimit; // TODO: implement
+export type TFieldSizeLimitFunction = (newLimit?: number) => number;
 
 export interface IDictReader extends IReader { // TODO: implement
   fieldnames: string[];

@@ -1,4 +1,4 @@
-import { IDialect, EQuoting } from '../types';
+import { IDialect, EQuoting } from '@types';
 
 // TODO: implement
 export class Dialect implements IDialect {

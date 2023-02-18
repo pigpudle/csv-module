@@ -1,4 +1,4 @@
-import { Dialect } from "./classes/Dialect";
+import { Dialect } from '@classes/Dialect';
 
 // TODO: implement
 export const excelDialect = new Dialect();

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { fieldSizeLimit } from '../../src/functions/fieldSizeLimit';
-import { resetState } from '../../src/state';
+import { fieldSizeLimit } from '@functions/fieldSizeLimit';
+import { resetState } from '@state';
 
 describe('test fieldSizeLimit', () => {
   beforeEach(() => {

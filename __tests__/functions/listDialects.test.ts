@@ -1,6 +1,6 @@
 import { expect } from 'chai';
-import { listDialects } from '../../src/functions/listDialects';
-import { resetState } from '../../src/state';
+import { listDialects } from '@functions/listDialects';
+import { resetState } from '@state';
 
 describe('test listDialects', () => {
   beforeEach(() => {

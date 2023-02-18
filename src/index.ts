@@ -1,66 +1,60 @@
-import { TCSVFile, TDialect, TExtrasaction, TFieldSizeLimitFunction, TGetDialectFunction, IDictReader, IDictWriter, TListDialectsFunction, TReaderFunction, TRegisterDialectFunction, TUnregisterDialectFunction, TWriterFunction, IDialect, IExcel, IExcelTab, IUnixDialect, ISniffer, EQuoting } from "./types";
-export { fieldSizeLimit } from './functions/fieldSizeLimit'
-export { listDialects } from './functions/listDialects'
-export { Dialect } from './classes/Dialect'
+import {
+  TCSVFile,
+  TDialect,
+  TExtrasaction,
+  TGetDialectFunction,
+  IDictReader,
+  IDictWriter,
+  TReaderFunction,
+  TRegisterDialectFunction,
+  TUnregisterDialectFunction,
+  TWriterFunction,
+  IExcel,
+  IExcelTab,
+  IUnixDialect,
+  ISniffer,
+  EQuoting,
+} from '@types';
+export { fieldSizeLimit } from '@functions/fieldSizeLimit';
+export { listDialects } from '@functions/listDialects';
+export { Dialect } from '@classes/Dialect';
 
 // TODO: implement
-export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {
-
-};
+export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {};
 
 // TODO: implement
-export const writer: TWriterFunction = (csvFile, dialect, fmtParams) => {
-
-};
+export const writer: TWriterFunction = (csvFile, dialect, fmtParams) => {};
 
 // TODO: implement
-export const registerDialect: TRegisterDialectFunction = (name, dialect, fmtParams) => {
-
-};
+export const registerDialect: TRegisterDialectFunction = (name, dialect, fmtParams) => {};
 
 // TODO: implement
-export const unregisterDialect: TUnregisterDialectFunction = (name) => {
-
-};
+export const unregisterDialect: TUnregisterDialectFunction = (name) => {};
 
 // TODO: implement
-export const getDialect: TGetDialectFunction = (name) => {
-
-};
+export const getDialect: TGetDialectFunction = (name) => {};
 
 // TODO: implement
 export class DictReader implements IDictReader {
-  constructor(f: TCSVFile, fieldNames?: string[], restKey?: string, restVal?: string, dialect?: TDialect) {
-
-  }
+  constructor(f: TCSVFile, fieldNames?: string[], restKey?: string, restVal?: string, dialect?: TDialect) {}
 }
 
 // TODO: implement
 export class DictWriter implements IDictWriter {
-  constructor(f: TCSVFile, fieldNames: string[], restVal?: string, extrasaction?: TExtrasaction, dialect?: TDialect) {
-
-  }
+  constructor(f: TCSVFile, fieldNames: string[], restVal?: string, extrasaction?: TExtrasaction, dialect?: TDialect) {}
 }
 
 // TODO: implement
-export class excel implements IExcel {
-
-}
+export class excel implements IExcel {}
 
 // TODO: implement
-export class excelTab implements IExcelTab {
-  
-}
+export class excelTab implements IExcelTab {}
 
 // TODO: implement
-export class unixDialect implements IUnixDialect {
-  
-}
+export class unixDialect implements IUnixDialect {}
 
 // TODO: implement
-export class Sniffer implements ISniffer {
-  
-}
+export class Sniffer implements ISniffer {}
 
 // constants
 // TODO: implement

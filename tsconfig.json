@@ -4,6 +4,9 @@
     "module": "commonjs",
     "declaration": true, // ensures that the compiler generates the respective TypeScript definitions files
     "outDir": "./dist",
-    "strict": true
-  }
+    "strict": true,
+    "sourceMap": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.test.ts"],
 }

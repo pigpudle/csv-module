@@ -1,20 +1,20 @@
-import { expect } from "chai";
-import { fieldSizeLimit } from "../../functions/fieldSizeLimit";
-import { resetState } from "../../state";
- 
-describe("test fieldSizeLimit", () => {
+import { expect } from 'chai';
+import { fieldSizeLimit } from '../../src/functions/fieldSizeLimit';
+import { resetState } from '../../src/state';
+
+describe('test fieldSizeLimit', () => {
   beforeEach(() => {
     resetState();
   });
 
-  describe("test getter", () => {
-    it("should return default value of 131072", () => {
+  describe('test getter', () => {
+    it('should return default value of 131072', () => {
       const result = fieldSizeLimit();
-      expect(result).to.equal(131072)
+      expect(result).to.equal(131072);
     });
   });
 
-  describe("test setter", () => {
+  describe('test setter', () => {
     it('should set value and return prev value, then new value', () => {
       const value = 102400;
       const prevValue = fieldSizeLimit(value);
@@ -41,5 +41,5 @@ describe("test fieldSizeLimit", () => {
       const newValue = fieldSizeLimit();
       expect(newValue).to.be.equal(value);
     });
-  })
+  });
 });

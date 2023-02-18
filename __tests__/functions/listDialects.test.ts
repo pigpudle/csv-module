@@ -1,6 +1,6 @@
-import { expect } from "chai";
-import { listDialects } from "../../functions/listDialects";
-import { resetState } from "../../state";
+import { expect } from 'chai';
+import { listDialects } from '../../src/functions/listDialects';
+import { resetState } from '../../src/state';
 
 describe('test listDialects', () => {
   beforeEach(() => {
@@ -20,5 +20,5 @@ describe('test listDialects', () => {
   it('should return default dialects names without one after unregistering a dialect', () => {
     // TODO: test with unregisterDialect()
     // test order if needed
-  })
+  });
 });

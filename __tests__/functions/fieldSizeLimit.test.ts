@@ -41,5 +41,10 @@ describe('test fieldSizeLimit', () => {
       const newValue = fieldSizeLimit();
       expect(newValue).to.be.equal(value);
     });
+
+    it('should throw error when limit is not a number', () => {
+      // @ts-expect-error Test for wrong argument type
+      expect(() => fieldSizeLimit('1')).to.throw(TypeError, 'limit must be an integer');
+    });
   });
 });

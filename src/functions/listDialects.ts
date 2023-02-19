@@ -5,5 +5,5 @@ import { TListDialectsFunction } from '@types';
 // are they sorted or not?
 // if they follow inserting order principle -> use Map data structure instead
 export const listDialects: TListDialectsFunction = () => {
-  return Object.keys(state.dialects);
+  return Array.from(state.dialects.keys());
 };

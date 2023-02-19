@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["ES2015"],
     "target": "es5",
     "module": "commonjs",
     "declaration": true, // ensures that the compiler generates the respective TypeScript definitions files

@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { listDialects } from '@functions/listDialects';
 import { resetState } from '@state';
+import { registerDialect } from '@functions/registerDialect';
 
 describe('test listDialects', () => {
   beforeEach(() => {
@@ -13,8 +14,9 @@ describe('test listDialects', () => {
   });
 
   it('should return default dialects names with new one after registering new dialect', () => {
-    // TODO: test with registerDialect()
-    // test order if needed
+    registerDialect('New Dialect');
+    const result = listDialects();
+    expect(result).to.deep.equal(['excel', 'excel-tab', 'unix', 'New Dialect']);
   });
 
   it('should return default dialects names without one after unregistering a dialect', () => {

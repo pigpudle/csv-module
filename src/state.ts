@@ -4,14 +4,11 @@ import { IState } from '@types';
 
 const defaultState: IState = {
   fieldSizeLimit: DEFAULT_FIELD_SIZE_LIMIT,
-  dialects: {
-    // @ts-ignore TODO: ignored until Dialect class is fully implemented
-    excel: excelDialect,
-    // @ts-ignore TODO: ignored until Dialect class is fully implemented
-    'excel-tab': excelTabDialect,
-    // @ts-ignore TODO: ignored until Dialect class is fully implemented
-    unix: unixDialect,
-  },
+  dialects: new Map([
+    ['excel', excelDialect],
+    ['excel-tab', excelTabDialect],
+    ['unix', unixDialect],
+  ]),
 };
 
 export let state: IState = { ...defaultState };

@@ -1,14 +1,9 @@
 import { registerDialect } from '@functions/registerDialect';
 import { Dialect } from '@classes/Dialect';
-import { resetState } from '@state';
 import { expect } from 'chai';
 import { listDialects } from '@functions/listDialects';
 
 describe('test registerDialect', () => {
-  beforeEach(() => {
-    resetState();
-  });
-
   it('should throw if name is not provided', () => {
     expect(registerDialect).to.throw(TypeError, 'expected at least 1 argument, got 0');
   });

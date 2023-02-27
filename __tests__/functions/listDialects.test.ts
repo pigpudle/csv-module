@@ -1,13 +1,8 @@
 import { expect } from 'chai';
 import { listDialects } from '@functions/listDialects';
-import { resetState } from '@state';
 import { registerDialect } from '@functions/registerDialect';
 
 describe('test listDialects', () => {
-  beforeEach(() => {
-    resetState();
-  });
-
   it('should return default dialects names', () => {
     const result = listDialects();
     expect(result).to.deep.equal(['excel', 'excel-tab', 'unix']);

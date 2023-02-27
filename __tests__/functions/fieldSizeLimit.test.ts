@@ -1,12 +1,7 @@
 import { expect } from 'chai';
 import { fieldSizeLimit } from '@functions/fieldSizeLimit';
-import { resetState } from '@state';
 
 describe('test fieldSizeLimit', () => {
-  beforeEach(() => {
-    resetState();
-  });
-
   describe('test getter', () => {
     it('should return default value of 131072', () => {
       const result = fieldSizeLimit();

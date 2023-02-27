@@ -11,9 +11,16 @@ const defaultState: IState = {
   ]),
 };
 
-export let state: IState = { ...defaultState };
+function deepCopyState(state: IState): IState {
+  return {
+    ...state,
+    dialects: new Map(state.dialects),
+  };
+}
+
+export let state: IState = deepCopyState(defaultState);
 
 // internal function
 export const resetState = () => {
-  state = { ...defaultState };
+  state = deepCopyState(defaultState);
 };

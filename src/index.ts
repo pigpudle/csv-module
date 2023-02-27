@@ -6,7 +6,6 @@ import {
   IDictReader,
   IDictWriter,
   TReaderFunction,
-  TUnregisterDialectFunction,
   TWriterFunction,
   IExcel,
   IExcelTab,
@@ -18,15 +17,14 @@ export { fieldSizeLimit } from '@functions/fieldSizeLimit';
 export { listDialects } from '@functions/listDialects';
 export { Dialect } from '@classes/Dialect';
 export { registerDialect } from '@functions/registerDialect';
+export { unregisterDialect } from '@functions/unregisterDialect';
+export { CsvError } from '@classes/CsvError';
 
 // TODO: implement
 export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {};
 
 // TODO: implement
 export const writer: TWriterFunction = (csvFile, dialect, fmtParams) => {};
-
-// TODO: implement
-export const unregisterDialect: TUnregisterDialectFunction = (name) => {};
 
 // TODO: implement
 export const getDialect: TGetDialectFunction = (name) => {};

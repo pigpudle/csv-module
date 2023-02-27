@@ -50,9 +50,9 @@ export type TRegisterDialectFunction = (
   name: string,
   dialectOrFmtParams?: TDialect | IFmtParams,
   overwritemtParams?: Partial<IFmtParams>,
-) => void; // TODO: implement
+) => void;
 
-export type TUnregisterDialectFunction = (name: string) => void; // TODO: implement
+export type TUnregisterDialectFunction = (name: string) => void;
 
 export type TGetDialectFunction = (name: string) => Readonly<TDialect>; // TODO: implement
 

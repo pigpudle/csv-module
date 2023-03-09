@@ -2,7 +2,6 @@ import {
   TCSVFile,
   TDialect,
   TExtrasaction,
-  TGetDialectFunction,
   IDictReader,
   IDictWriter,
   TReaderFunction,
@@ -18,6 +17,7 @@ export { listDialects } from '@functions/listDialects';
 export { Dialect } from '@classes/Dialect';
 export { registerDialect } from '@functions/registerDialect';
 export { unregisterDialect } from '@functions/unregisterDialect';
+export { getDialect } from '@functions/getDialect';
 export { CsvError } from '@classes/CsvError';
 
 // TODO: implement
@@ -25,9 +25,6 @@ export const reader: TReaderFunction = (csvFile, dialect, fmtParams) => {};
 
 // TODO: implement
 export const writer: TWriterFunction = (csvFile, dialect, fmtParams) => {};
-
-// TODO: implement
-export const getDialect: TGetDialectFunction = (name) => {};
 
 // TODO: implement
 export class DictReader implements IDictReader {

@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { listDialects } from '@functions/listDialects';
 import { registerDialect } from '@functions/registerDialect';
+import { unregisterDialect } from '@functions/unregisterDialect';
 
 describe('test listDialects', () => {
   it('should return default dialects names', () => {
@@ -15,7 +16,8 @@ describe('test listDialects', () => {
   });
 
   it('should return default dialects names without one after unregistering a dialect', () => {
-    // TODO: test with unregisterDialect()
-    // test order if needed
+    unregisterDialect('excel-tab');
+    const result = listDialects();
+    expect(result).to.deep.equal(['excel', 'unix']);
   });
 });
